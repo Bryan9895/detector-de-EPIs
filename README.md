@@ -74,14 +74,9 @@ PIBIC-Jr-Deteccao-EPIs/
 ├── README.md
 ├── docs/
 │   ├── diario-de-bordo.md
-│   ├── objetivos-do-projeto.md
 │   └── referencias.md
-├── notebooks/
-│   └── treinamento_yolo.ipynb
+├── uteis/
 ├── src/
-│   ├── detectar_imagem.py
-│   ├── detectar_video.py
-│   └── detectar_webcam.py
 ├── resultados/
 ├── models/
 ├── requirements.txt
@@ -121,7 +116,7 @@ O projeto está em sua fase inicial. Até o momento foram realizadas:
 
 ## Próximos passos
 
-- criar e configurar o repositório no GitHub;
+- criar e configurar o repositório no GitHub; ✅
 - preparar o ambiente Python;
 - estudar os fundamentos de Visão Computacional e YOLO;
 - pesquisar datasets públicos de EPIs;
@@ -129,4 +124,4 @@ O projeto está em sua fase inicial. Até o momento foram realizadas:
 
 ## Referência principal
 
-**Projeto PIBIC Jr.** *Introdução à Inteligência Artificial por Meio da Detecção Automática de EPIs com Visão Computacional*. Versão 2.0. Fortaleza, maio de 2026.
+**Projeto PIBIC Jr.** *Introdução à Inteligência Artificial por Meio da Detecção Automática de EPIs com Visão Computacional*. Versão 0.0. Fortaleza, maio de 2026.
