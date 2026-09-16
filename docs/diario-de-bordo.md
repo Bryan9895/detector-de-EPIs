@@ -35,7 +35,6 @@ A solução proposta é desenvolver um modelo de Inteligência Artificial basead
 
 ### Materiais produzidos
 
-- Relatório de compreensão inicial do projeto.
 - Primeiro registro do diário de bordo.
 
 ### Dificuldades
@@ -44,9 +43,9 @@ Ainda preciso aprender melhor como funcionam o YOLO, a criação de datasets e a
 
 ### Próximos passos
 
-- Criar o repositório do projeto no GitHub.
-- Adicionar o diário de bordo à pasta `docs`.
-- Estudar os conceitos básicos de Visão Computacional.
+- Criar o repositório do projeto no GitHub. ✅
+- Adicionar o diário de bordo à pasta `docs`. ✅
+- Estudar os conceitos básicos de Visão Computacional. 
 - Preparar o ambiente de desenvolvimento em Python.
 - Registrar as próximas atividades realizadas no projeto.
 
