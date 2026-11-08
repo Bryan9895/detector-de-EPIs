@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Publicação de datasets do PIBIC-Jr como anexos de uma GitHub Release.
-# Uso: bash codigo/publicar_datasets.sh "/caminho/para/pasta-com-os-6-zips"
+# Uso: bash manutencao/publicar_datasets.sh "/caminho/para/pasta-com-os-6-zips"
 set -euo pipefail
 
 REPO="Bryan9895/detector-de-EPIs"

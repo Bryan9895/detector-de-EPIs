@@ -17,7 +17,7 @@ Os arquivos são exportações de datasets no formato YOLO26. **Não são modelo
 
 1. Baixe os seis arquivos do Google Drive pessoal no computador e coloque-os na **mesma pasta**, mantendo os nomes exatamente como na tabela.
 2. No Ubuntu, instale o GitHub CLI com `sudo apt install gh` (se ainda não estiver instalado), e autentique-se com `gh auth login`.
-3. Na raiz do repositório atualizado, execute `bash codigo/publicar_datasets.sh "$HOME/Downloads"` ou informe o diretório real.
+3. Na raiz do repositório atualizado, execute `bash manutencao/publicar_datasets.sh "$HOME/Downloads"` ou informe o diretório real.
 4. O script só continuará se encontrar os **seis** ZIPs com os tamanhos esperados; então criará uma Release `datasets-v1` **em rascunho** e anexará os ZIPs.
 5. Confira cada dataset, sua licença e as permissões de redistribuição antes de publicar com `gh release edit datasets-v1 -R Bryan9895/detector-de-EPIs --draft=false`.
 

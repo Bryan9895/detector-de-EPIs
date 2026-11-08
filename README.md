@@ -9,6 +9,8 @@ detector-de-EPIs/
 ├── codigo/
 │   ├── testar_yolo.py       # Teste atual de YOLO e desempenho
 │   └── vinicius_yolov8.py   # Protótipo original do antigo bolsista
+├── manutencao/              # Ferramentas de suporte ao repositório
+│   └── publicar_datasets.sh
 ├── modelos/                 # Pesos .pt e modelos treinados (locais)
 ├── documentacao/            # Estudos, diário, testes, materiais e autoria
 ├── README.md
@@ -46,4 +48,4 @@ Estudar Python, imagens digitais e OpenCV; validar o ambiente e os testes; depoi
 
 ## Datasets para treinamento
 
-Os seis arquivos de imagens anotadas para YOLO26 estão identificados em [documentacao/datasets.md](documentacao/datasets.md). Como são ZIPs grandes, devem ser anexados a uma **GitHub Release**, não à branch `main`. O comando `bash codigo/publicar_datasets.sh "$HOME/Downloads"` auxilia no envio, depois que os seis ZIPs forem baixados para o computador. **Esta documentação não significa que os datasets já foram publicados.**
+Os seis arquivos de imagens anotadas para YOLO26 estão identificados em [documentacao/datasets.md](documentacao/datasets.md). Como são ZIPs grandes, devem ser anexados a uma **GitHub Release**, não à branch `main`. O comando `bash manutencao/publicar_datasets.sh "$HOME/Downloads"` auxilia no envio, depois que os seis ZIPs forem baixados para o computador. **Esta documentação não significa que os datasets já foram publicados.**
