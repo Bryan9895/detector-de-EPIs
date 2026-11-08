@@ -1,43 +1,21 @@
-# Ambiente local e Python
+# Ambiente Python e arquivos locais
 .venv/
 venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-.mypy_cache/
 .ruff_cache/
-*.egg-info/
-build/
-dist/
-.ipynb_checkpoints/
 .env
 .env.*
 !.env.example
-
-# Dados coletados e preparados (nao versionar imagens ou rotulos)
-data/raw/*
-!data/raw/.gitkeep
-data/interim/*
-!data/interim/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-
-# Pesos, arquivos exportados e saídas de experimentos
-models/*
-!models/README.md
-resultados/*
-!resultados/README.md
-runs/
-*.pt
-*.pth
-*.onnx
-*.engine
-*.tflite
-*.ncnn
-*.ckpt
-
-# Arquivos locais de sistema/editor
-.DS_Store
-Thumbs.db
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
+
+# Arquivos temporarios de execucao
+documentacao/resultados/
+runs/
+
+# Os pesos em modelos/ podem ser versionados quando necessario.
+# Para pesos grandes, preferir Git LFS e evitar ultrapassar limites do GitHub.

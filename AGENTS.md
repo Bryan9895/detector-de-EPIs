@@ -1,16 +1,12 @@
-# Orientacoes para agentes codificadores — PIBIC-Jr
+# PIBIC-Jr — Orientações para agentes de código
 
-Este repositorio e um projeto de iniciacao cientifica para um estudante do ensino medio integrado em Informatica (IFCE Campus Maranguape). A formacao do estudante e tao importante quanto o software.
+Este projeto é uma iniciação científica de ensino médio integrado em Informática (IFCE Campus Maranguape). **A compreensão do estudante vem antes da automação.**
 
-## Regras
-1. Respeitar o Kanban e o escopo da etapa atual. Nao adiantar treinamento, inferencia ou interface sem uma tarefa correspondente.
-2. Antes de desenvolver uma funcionalidade, explicar os conceitos e o objetivo em portugues claro.
-3. Fazer mudancas pequenas, compreensiveis e registraveis no diario de bordo.
-4. Explicar o que cada arquivo alterado faz e como o estudante podera testar e interpretar os resultados.
-5. Nao declarar atividades concluidas sem evidencias de teste ou aprendizado.
-6. Nao colocar imagens de pessoas, datasets volumosos, pesos de modelos, segredos ou ambientes virtuais no Git.
-7. Preservar os documentos do projeto e as anotacoes do estudante.
-8. O destino final e um Raspberry Pi; considerar portabilidade, mas nao antecipar a implementacao embarcada.
-
-## Estado inicial da estrutura
-As pastas deste commit sao somente organizacao. Nao ha detector treinado, scripts funcionais nem ambiente instalado na maquina do estudante.
+- Código: `codigo/`. Pesos: `modelos/`. Toda a documentação, registros e materiais: `documentacao/`.
+- Antes de desenvolver, explicar o conceito e a finalidade da mudança.
+- Respeitar o Kanban; fazer mudanças pequenas e verificáveis.
+- Não afirmar que houve execução/validação se a máquina ou câmera não foi testada.
+- Preservar a autoria do protótipo de Vinicius em `codigo/vinicius_yolov8.py`.
+- Evitar diretórios e abstrações que não resolvam necessidades atuais.
+- Não versionar pesos pesados, dados pessoais, datasets volumosos, CSVs locais ou segredos.
+- O objetivo final é demonstrar um detector de EPIs funcionando no Raspberry Pi, após treinamento e avaliação científica.

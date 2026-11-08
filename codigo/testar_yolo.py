@@ -1,11 +1,12 @@
 """Primeiro teste de YOLO com webcam/vídeo e métricas de desempenho.
 
-Uso: python scripts/testar_yolo.py --modelo yolo26n.pt --duracao 60
+Uso: python codigo/testar_yolo.py --modelo yolo26n.pt --duracao 60
 Não treina um modelo de EPIs: utiliza pesos gerais pré-treinados.
 """
 
 import argparse
 import csv
+import shutil
 from collections import deque
 from datetime import datetime
 from math import ceil
@@ -15,6 +16,8 @@ from time import perf_counter
 
 import cv2
 from ultralytics import YOLO
+
+RAIZ = Path(__file__).resolve().parent.parent
 
 
 def argumentos():
@@ -43,7 +46,7 @@ def p95(valores):
 
 
 def salvar_csv(registros, args, resolucao):
-    pasta = Path("resultados")
+    pasta = RAIZ / "documentacao" / "resultados"
     pasta.mkdir(exist_ok=True)
     nome_modelo = Path(args.modelo).stem.replace(" ", "_")
     arquivo = pasta / f"teste_{nome_modelo}_{datetime.now():%Y%m%d_%H%M%S}.csv"
@@ -67,11 +70,32 @@ def salvar_csv(registros, args, resolucao):
     print(f"CSV salvo em: {arquivo}")
 
 
+def carregar_modelo(nome):
+    """Prioriza os pesos em modelos/ e guarda ali os downloads novos."""
+    caminho = Path(nome)
+    if caminho.name != nome or caminho.suffix != ".pt":
+        return YOLO(str(caminho))
+
+    pasta = RAIZ / "modelos"
+    pasta.mkdir(exist_ok=True)
+    destino = pasta / nome
+    if destino.is_file():
+        print(f"Usando modelo local: {destino}")
+        return YOLO(str(destino))
+
+    modelo = YOLO(nome)
+    origem = Path.cwd() / nome
+    if origem.is_file() and origem.resolve() != destino.resolve():
+        shutil.move(str(origem), str(destino))
+        print(f"Pesos guardados em: {destino}")
+    return modelo
+
+
 def main():
     args = argumentos()
     fonte = int(args.fonte) if args.fonte.isdecimal() else args.fonte
     print(f"Carregando {args.modelo} (pode haver download na primeira execução)...")
-    modelo = YOLO(args.modelo)
+    modelo = carregar_modelo(args.modelo)
     camera = cv2.VideoCapture(fonte)
     if not camera.isOpened():
         raise SystemExit(f"Não foi possível abrir a fonte: {args.fonte}")
