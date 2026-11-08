@@ -131,3 +131,9 @@ O projeto está em sua fase inicial. Até o momento foram realizadas:
 Foi incorporado, **sem alterações funcionais**, o protótipo de monitoramento por webcam do antigo bolsista **Vinicius Rielmison Rocha de Sousa**, originalmente desenvolvido com **YOLOv8 e OpenCV**. Essa implementação permite detectar pessoas e outros objetos reconhecidos pelo modelo padrão, exibir HUD, contagem, FPS e alerta visual de presença; **não é ainda um detector treinado de EPIs**.
 
 Consulte [legado/vinicius-rielmison/](legado/vinicius-rielmison/) para acessar o código original, a atribuição de autoria e as orientações. O desenvolvimento novo e os experimentos com YOLO11 continuarão separados em `src/` e nas demais pastas planejadas.
+
+## Primeiro experimento de desempenho (YOLO geral)
+
+O script [scripts/testar_yolo.py](scripts/testar_yolo.py) permite testar YOLO26n na webcam, com medições separadas de FPS geral e latência da chamada ao modelo. Ele também aceita pesos YOLOv8n ou YOLO11n para comparação exploratória.
+
+Consulte [scripts/README.md](scripts/README.md) para instalar e executar. Os testes ainda precisam ser realizados no computador do estudante; **este não é um detector de EPIs treinado**.
