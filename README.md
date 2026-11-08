@@ -125,3 +125,9 @@ O projeto está em sua fase inicial. Até o momento foram realizadas:
 ## Referência principal
 
 **Projeto PIBIC Jr.** *Introdução à Inteligência Artificial por Meio da Detecção Automática de EPIs com Visão Computacional*. Versão 0.0. Fortaleza, maio de 2026.
+
+## Código histórico do bolsista anterior
+
+Foi incorporado, **sem alterações funcionais**, o protótipo de monitoramento por webcam do antigo bolsista **Vinicius Rielmison Rocha de Sousa**, originalmente desenvolvido com **YOLOv8 e OpenCV**. Essa implementação permite detectar pessoas e outros objetos reconhecidos pelo modelo padrão, exibir HUD, contagem, FPS e alerta visual de presença; **não é ainda um detector treinado de EPIs**.
+
+Consulte [legado/vinicius-rielmison/](legado/vinicius-rielmison/) para acessar o código original, a atribuição de autoria e as orientações. O desenvolvimento novo e os experimentos com YOLO11 continuarão separados em `src/` e nas demais pastas planejadas.
