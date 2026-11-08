@@ -43,3 +43,7 @@ O protótipo inicial é de **Vinicius Rielmison Rocha de Sousa**. O arquivo de c
 ## Próximos passos
 
 Estudar Python, imagens digitais e OpenCV; validar o ambiente e os testes; depois preparar o dataset de EPIs, treinar e comparar modelos, desenvolver a detecção e avaliar a execução no Raspberry Pi.
+
+## Datasets para treinamento
+
+Os seis arquivos de imagens anotadas para YOLO26 estão identificados em [documentacao/datasets.md](documentacao/datasets.md). Como são ZIPs grandes, devem ser anexados a uma **GitHub Release**, não à branch `main`. O comando `bash codigo/publicar_datasets.sh "$HOME/Downloads"` auxilia no envio, depois que os seis ZIPs forem baixados para o computador. **Esta documentação não significa que os datasets já foram publicados.**
