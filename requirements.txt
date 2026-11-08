@@ -1,0 +1,4 @@
+# Dependencias iniciais previstas. Versoes serao fixadas apos a validacao do ambiente.
+numpy
+opencv-python
+ultralytics
